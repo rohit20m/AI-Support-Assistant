@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Support Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">AI</div>
+            </div>
+
+            <nav class="navigation">
+
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">⌂</span>
+                    <span>Overview</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">◯</span>
+                    <span>Support Cases</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">✦</span>
+                    <span>AI Assistant</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⌘</span>
+                    <span>Workflows</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">▤</span>
+                    <span>Knowledge</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">▣</span>
+                    <span>Integrations</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">▥</span>
+                    <span>Analytics</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+            <!-- System status -->
+
+            <div class="system-status">
+
+                <div class="status-title">
+                    <span class="status-dot"></span>
+                    Platform status
+                </div>
+
+                <div class="status-text">
+                    All systems operational
+                </div>
+
+                <div class="mini-chart">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <!-- User -->
+
+            <div class="user-card">
+
+                <div class="user-avatar">
+                    RS
+                </div>
+
+                <div class="user-info">
+                    <strong>Support Team</strong>
+                    <small>Administrator</small>
+                </div>
+
+                <span class="dropdown">⌄</span>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content">
+
+            <!-- Header -->
+
+            <header class="top-header">
+
+                <div>
+
+                    <div class="title-row">
+
+                        <h1>AI Support Assistant</h1>
+
+                        <span class="live-badge">
+                            <span></span>
+                            Live
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Analyze support cases, find solutions and assist customers with AI
+                    </p>
+
+                </div>
+
+                <div class="header-actions">
+
+                    <button class="date-button">
+                        Last 7 days
+                        <span>⌄</span>
+                    </button>
+
+                    <button class="new-case-button">
+                        + New Case
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================= METRICS ================= -->
+
+            <section class="metrics-grid">
+
+                <div class="metric-card">
+
+                    <div class="metric-icon blue">
+                        ◯
+                    </div>
+
+                    <div class="metric-content">
+
+                        <span>Support Cases</span>
+
+                        <strong>1,248</strong>
+
+                        <small class="positive">
+                            ↗ 12.4%
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon purple">
+                        ✦
+                    </div>
+
+                    <div class="metric-content">
+
+                        <span>AI Resolution Rate</span>
+
+                        <strong>87.6%</strong>
+
+                        <small class="positive">
+                            ↗ 6.8%
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon cyan">
+                        ◷
+                    </div>
+
+                    <div class="metric-content">
+
+                        <span>Avg. Handle Time</span>
+
+                        <strong>4m 32s</strong>
+
+                        <small class="positive">
+                            ↘ 8.7%
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon pink">
+                        ♙
+                    </div>
+
+                    <div class="metric-content">
+
+                        <span>AI Suggestions</span>
+
+                        <strong>3,842</strong>
+
+                        <small class="positive">
+                            ↗ 18.2%
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= MAIN GRID ================= -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- LEFT COLUMN -->
+
+                <div class="left-column">
+
+
+                    <!-- CASE ANALYZER -->
+
+                    <div class="panel case-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>Support Case Analyzer</h2>
+
+                                <p>
+                                    Describe a customer issue and let AI analyze it
+                                </p>
+
+                            </div>
+
+                            <span class="ai-badge">
+                                AI Powered
+                            </span>
+
+                        </div>
+
+
+                        <div class="case-input-area">
+
+                            <label for="caseInput">
+                                Case Description
+                            </label>
+
+                            <textarea
+                                id="caseInput"
+                                placeholder="Example: The user is unable to close the store after completing the daily operations..."
+                            ></textarea>
+
+
+                            <div class="input-footer">
+
+                                <span>
+                                    <span id="characterCount">0</span> characters
+                                </span>
+
+                                <button
+                                    class="analyze-button"
+                                    id="analyzeButton"
+                                >
+                                    <span>✦</span>
+                                    Analyze Case
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- AI RESULT -->
+
+                        <div
+                            class="analysis-result"
+                            id="analysisResult"
+                        >
+
+                            <div class="result-header">
+
+                                <div class="result-title">
+
+                                    <div class="ai-avatar">
+                                        AI
+                                    </div>
+
+                                    <div>
+
+                                        <strong>AI Analysis</strong>
+
+                                        <small>
+                                            Ready to analyze your case
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                                <span class="confidence">
+                                    Confidence: 92%
+                                </span>
+
+                            </div>
+
+
+                            <div class="result-grid">
+
+                                <div class="result-item">
+
+                                    <span>Issue Category</span>
+
+                                    <strong id="category">
+                                        —
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="result-item">
+
+                                    <span>Priority</span>
+
+                                    <strong id="priority">
+                                        —
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="result-item full">
+
+                                    <span>Possible Cause</span>
+
+                                    <p id="cause">
+                                        Enter a support case above and click
+                                        "Analyze Case" to get an AI-generated analysis.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="suggested-actions">
+
+                                <h3>Suggested Troubleshooting</h3>
+
+                                <ul id="suggestions">
+
+                                    <li>
+                                        <span>✓</span>
+                                        AI suggestions will appear here
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LIVE CONVERSATIONS -->
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>Live Conversations</h2>
+
+                                <p>Recent customer interactions</p>
+
+                            </div>
+
+                            <span class="active-count">
+                                ● 13 active
+                            </span>
+
+                        </div>
+
+
+                        <div class="conversation">
+
+                            <div class="conversation-avatar">
+                                EM
+                            </div>
+
+                            <div class="conversation-content">
+
+                                <div class="conversation-name">
+                                    <strong>Customer #EM-98421</strong>
+                                    <span>2 min ago</span>
+                                </div>
+
+                                <p>
+                                    User is unable to complete the store closing process.
+                                </p>
+
+                                <div class="ai-message">
+
+                                    <div class="small-ai">
+                                        AI
+                                    </div>
+
+                                    <span>
+                                        AI suggested checking store status and user permissions.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="conversation">
+
+                            <div class="conversation-avatar">
+                                AK
+                            </div>
+
+                            <div class="conversation-content">
+
+                                <div class="conversation-name">
+                                    <strong>Customer #AK-78213</strong>
+                                    <span>5 min ago</span>
+                                </div>
+
+                                <p>
+                                    Dashboard is showing incorrect scheduling information.
+                                </p>
+
+                                <div class="ai-message">
+
+                                    <div class="small-ai">
+                                        AI
+                                    </div>
+
+                                    <span>
+                                        Possible configuration mismatch detected.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- RIGHT COLUMN -->
+
+                <div class="right-column">
+
+
+                    <!-- AI AGENT -->
+
+                    <div class="panel agent-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>AI Support Agent</h2>
+
+                                <p>AI assistant status</p>
+
+                            </div>
+
+                            <span class="active-badge">
+                                Active
+                            </span>
+
+                        </div>
+
+
+                        <div class="agent-body">
+
+                            <div class="robot-container">
+
+                                <div class="robot">
+                                    AI
+                                </div>
+
+                            </div>
+
+
+                            <div class="agent-details">
+
+                                <div class="detail">
+
+                                    <span>Model</span>
+
+                                    <strong>AI Support Model</strong>
+
+                                </div>
+
+                                <div class="detail">
+
+                                    <span>Confidence</span>
+
+                                    <strong>92%</strong>
+
+                                    <div class="confidence-bar">
+
+                                        <div></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="detail">
+
+                                    <span>Knowledge Sources</span>
+
+                                    <strong>12 documents</strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- HOW AI HELPS -->
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>How AI Helps</h2>
+
+                                <p>Support workflow</p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="ai-flow">
+
+                            <div class="flow-item">
+
+                                <div class="flow-icon">
+                                    💬
+                                </div>
+
+                                <strong>1. Request</strong>
+
+                                <small>
+                                    Customer describes issue
+                                </small>
+
+                            </div>
+
+
+                            <div class="flow-arrow">
+                                →
+                            </div>
+
+
+                            <div class="flow-item">
+
+                                <div class="flow-icon">
+                                    ✦
+                                </div>
+
+                                <strong>2. Analyze</strong>
+
+                                <small>
+                                    AI analyzes the issue
+                                </small>
+
+                            </div>
+
+
+                            <div class="flow-arrow">
+                                →
+                            </div>
+
+
+                            <div class="flow-item">
+
+                                <div class="flow-icon">
+                                    ⚡
+                                </div>
+
+                                <strong>3. Suggest</strong>
+
+                                <small>
+                                    Provides solution
+                                </small>
+
+                            </div>
+
+
+                            <div class="flow-arrow">
+                                →
+                            </div>
+
+
+                            <div class="flow-item">
+
+                                <div class="flow-icon success">
+                                    ✓
+                                </div>
+
+                                <strong>4. Resolve</strong>
+
+                                <small>
+                                    Resolve or escalate
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- KNOWLEDGE BASE -->
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>Knowledge Base</h2>
+
+                                <p>Available support documentation</p>
+
+                            </div>
+
+                            <a href="#">
+                                View all
+                            </a>
+
+                        </div>
+
+
+                        <div class="search-box">
+
+                            <span>⌕</span>
+
+                            <input
+                                type="text"
+                                placeholder="Search documentation..."
+                            >
+
+                        </div>
+
+
+                        <div class="knowledge-item">
+
+                            <div class="document-icon">
+                                ▤
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Store Management Guide
+                                </strong>
+
+                                <small>
+                                    Updated 2 days ago · Guide
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="knowledge-item">
+
+                            <div class="document-icon">
+                                ▤
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    User Permissions Guide
+                                </strong>
+
+                                <small>
+                                    Updated 1 week ago · Guide
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="knowledge-item">
+
+                            <div class="document-icon">
+                                ▤
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Troubleshooting FAQ
+                                </strong>
+
+                                <small>
+                                    Updated 3 days ago · FAQ
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RECENT ACTIVITY -->
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>Recent Activity</h2>
+
+                                <p>AI assistant activity</p>
+
+                            </div>
+
+                            <a href="#">
+                                View all
+                            </a>
+
+                        </div>
+
+
+                        <div class="activity">
+
+                            <div class="activity-icon green">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Case analyzed
+                                </strong>
+
+                                <small>
+                                    Store closing issue · 1 min ago
+                                </small>
+
+                            </div>
+
+                            <span class="completed">
+                                Completed
+                            </span>
+
+                        </div>
+
+
+                        <div class="activity">
+
+                            <div class="activity-icon blue">
+                                ✦
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    AI suggestion generated
+                                </strong>
+
+                                <small>
+                                    User permission issue · 3 min ago
+                                </small>
+
+                            </div>
+
+                            <span class="completed">
+                                Completed
+                            </span>
+
+                        </div>
+
+
+                        <div class="activity">
+
+                            <div class="activity-icon orange">
+                                !
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Human handoff
+                                </strong>
+
+                                <small>
+                                    Complex support case · 8 min ago
+                                </small>
+
+                            </div>
+
+                            <span class="in-progress">
+                                In progress
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
