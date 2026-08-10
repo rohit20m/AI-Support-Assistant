@@ -22,7 +22,7 @@ caseInput.addEventListener("input", function () {
 // ANALYZE CASE
 // ==============================
 
-analyzeButton.addEventListener("click", function () {
+analyzeButton.addEventListener("click", async function () {
 
     const caseText = caseInput.value.trim().toLowerCase();
 
@@ -35,168 +35,178 @@ analyzeButton.addEventListener("click", function () {
     }
 
 
-    // ==============================
-    // RTM PROJECT CASE
-    // ==============================
+    const response = await fetch("http://127.0.0.1:5000/analyze", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            case: caseText
+        })
+    });
 
-    if ( caseText.includes("rtm") || caseText.includes("project")) 
-    {
-        category.textContent = "Project / Configuration";
-        priority.textContent = "Medium";
-        cause.textContent = "The case appears to be related to an RTM project or configuration activity. Further investigation is required to identify the specific project component involved.";
+    // // ==============================
+    // // RTM PROJECT CASE
+    // // ==============================
 
-        suggestions.innerHTML = `
+    // if ( caseText.includes("rtm") || caseText.includes("project"))
+    // {
+    //     category.textContent = "Project / Configuration";
+    //     priority.textContent = "Medium";
+    //     cause.textContent = "The case appears to be related to an RTM project or configuration activity. Further investigation is required to identify the specific project component involved.";
 
-            <li>
-                <span>✓</span>
-                Verify the RTM project configuration.
-            </li>
+    //     suggestions.innerHTML = `
 
-            <li>
-                <span>✓</span>
-                Check whether the project is active and properly configured.
-            </li>
+    //         <li>
+    //             <span>✓</span>
+    //             Verify the RTM project configuration.
+    //         </li>
 
-            <li>
-                <span>✓</span>
-                Review recent configuration changes.
-            </li>
+    //         <li>
+    //             <span>✓</span>
+    //             Check whether the project is active and properly configured.
+    //         </li>
 
-            <li>
-                <span>✓</span>
-                Check application logs for related errors.
-            </li>
+    //         <li>
+    //             <span>✓</span>
+    //             Review recent configuration changes.
+    //         </li>
 
-        `;
+    //         <li>
+    //             <span>✓</span>
+    //             Check application logs for related errors.
+    //         </li>
 
-    }
+    //     `;
 
-
-    // ==============================
-    // STORE CLOSING CASE
-    // ==============================
-
-    else if (
-        caseText.includes("close store") ||
-        caseText.includes("closing store") ||
-        caseText.includes("store closing")
-    ) {
-
-        category.textContent = "Store Management";
-
-        priority.textContent = "High";
-
-        cause.textContent =
-            "The issue may be related to store status, configuration, or user permissions required to complete the store closing process.";
+    // }
 
 
-        suggestions.innerHTML = `
+    // // ==============================
+    // // STORE CLOSING CASE
+    // // ==============================
 
-            <li>
-                <span>✓</span>
-                Verify the current store status.
-            </li>
+    // else if (
+    //     caseText.includes("close store") ||
+    //     caseText.includes("closing store") ||
+    //     caseText.includes("store closing")
+    // ) {
 
-            <li>
-                <span>✓</span>
-                Check the user's permissions.
-            </li>
+    //     category.textContent = "Store Management";
 
-            <li>
-                <span>✓</span>
-                Review the store configuration.
-            </li>
+    //     priority.textContent = "High";
 
-            <li>
-                <span>✓</span>
-                Check recent system or configuration changes.
-            </li>
-
-        `;
-
-    }
+    //     cause.textContent =
+    //         "The issue may be related to store status, configuration, or user permissions required to complete the store closing process.";
 
 
-    // ==============================
-    // PERMISSION CASE
-    // ==============================
+    //     suggestions.innerHTML = `
 
-    else if (
-        caseText.includes("permission") ||
-        caseText.includes("access") ||
-        caseText.includes("login")
-    ) {
+    //         <li>
+    //             <span>✓</span>
+    //             Verify the current store status.
+    //         </li>
 
-        category.textContent = "User Access";
+    //         <li>
+    //             <span>✓</span>
+    //             Check the user's permissions.
+    //         </li>
 
-        priority.textContent = "High";
+    //         <li>
+    //             <span>✓</span>
+    //             Review the store configuration.
+    //         </li>
 
-        cause.textContent =
-            "The issue may be related to user permissions, profile configuration, or authentication settings.";
+    //         <li>
+    //             <span>✓</span>
+    //             Check recent system or configuration changes.
+    //         </li>
 
+    //     `;
 
-        suggestions.innerHTML = `
-
-            <li>
-                <span>✓</span>
-                Verify the user's profile and permissions.
-            </li>
-
-            <li>
-                <span>✓</span>
-                Confirm that the required access is assigned.
-            </li>
-
-            <li>
-                <span>✓</span>
-                Check whether the user account is active.
-            </li>
-
-            <li>
-                <span>✓</span>
-                Review recent permission changes.
-            </li>
-
-        `;
-
-    }
+    // }
 
 
-    // ==============================
-    // DEFAULT CASE
-    // ==============================
+    // // ==============================
+    // // PERMISSION CASE
+    // // ==============================
 
-    else {
+    // else if (
+    //     caseText.includes("permission") ||
+    //     caseText.includes("access") ||
+    //     caseText.includes("login")
+    // ) {
 
-        category.textContent = "General Support";
-        priority.textContent = "Medium";
-        cause.textContent = "The case requires further investigation. More information may be needed to determine the root cause.";
+    //     category.textContent = "User Access";
+
+    //     priority.textContent = "High";
+
+    //     cause.textContent =
+    //         "The issue may be related to user permissions, profile configuration, or authentication settings.";
 
 
-        suggestions.innerHTML = `
+    //     suggestions.innerHTML = `
 
-            <li>
-                <span>✓</span>
-                Collect additional information from the user.
-            </li>
+    //         <li>
+    //             <span>✓</span>
+    //             Verify the user's profile and permissions.
+    //         </li>
 
-            <li>
-                <span>✓</span>
-                Check recent application changes.
-            </li>
+    //         <li>
+    //             <span>✓</span>
+    //             Confirm that the required access is assigned.
+    //         </li>
 
-            <li>
-                <span>✓</span>
-                Review relevant system logs.
-            </li>
+    //         <li>
+    //             <span>✓</span>
+    //             Check whether the user account is active.
+    //         </li>
 
-            <li>
-                <span>✓</span>
-                Escalate the case if the issue persists.
-            </li>
+    //         <li>
+    //             <span>✓</span>
+    //             Review recent permission changes.
+    //         </li>
 
-        `;
+    //     `;
 
-    }
+    // }
+
+
+    // // ==============================
+    // // DEFAULT CASE
+    // // ==============================
+
+    // else {
+
+    //     category.textContent = "General Support";
+    //     priority.textContent = "Medium";
+    //     cause.textContent = "The case requires further investigation. More information may be needed to determine the root cause.";
+
+
+    //     suggestions.innerHTML = `
+
+    //         <li>
+    //             <span>✓</span>
+    //             Collect additional information from the user.
+    //         </li>
+
+    //         <li>
+    //             <span>✓</span>
+    //             Check recent application changes.
+    //         </li>
+
+    //         <li>
+    //             <span>✓</span>
+    //             Review relevant system logs.
+    //         </li>
+
+    //         <li>
+    //             <span>✓</span>
+    //             Escalate the case if the issue persists.
+    //         </li>
+
+    //     `;
+
+    // }
 
 });
