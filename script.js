@@ -14,9 +14,7 @@ const suggestions = document.getElementById("suggestions");
 // ==============================
 
 caseInput.addEventListener("input", function () {
-
     characterCount.textContent = caseInput.value.length;
-
 });
 
 
@@ -32,11 +30,8 @@ analyzeButton.addEventListener("click", function () {
     // Check whether user entered something
 
     if (caseText === "") {
-
         alert("Please enter a support case first.");
-
         return;
-
     }
 
 
@@ -44,18 +39,11 @@ analyzeButton.addEventListener("click", function () {
     // RTM PROJECT CASE
     // ==============================
 
-    if (
-        caseText.includes("rtm") ||
-        caseText.includes("project")
-    ) {
-
+    if ( caseText.includes("rtm") || caseText.includes("project")) 
+    {
         category.textContent = "Project / Configuration";
-
         priority.textContent = "Medium";
-
-        cause.textContent =
-            "The case appears to be related to an RTM project or configuration activity. Further investigation is required to identify the specific project component involved.";
-
+        cause.textContent = "The case appears to be related to an RTM project or configuration activity. Further investigation is required to identify the specific project component involved.";
 
         suggestions.innerHTML = `
 
@@ -181,11 +169,8 @@ analyzeButton.addEventListener("click", function () {
     else {
 
         category.textContent = "General Support";
-
         priority.textContent = "Medium";
-
-        cause.textContent =
-            "The case requires further investigation. More information may be needed to determine the root cause.";
+        cause.textContent = "The case requires further investigation. More information may be needed to determine the root cause.";
 
 
         suggestions.innerHTML = `
