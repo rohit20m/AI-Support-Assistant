@@ -24,11 +24,11 @@
             <nav class="navigation">
 
                 <a href="#" class="nav-item active">
-                    <span class="nav-icon">⌂</span>
-                    <span>Overview</span>
+                    <span class="nav-icon">▦</span>
+                    <span>Dashboard</span>
                 </a>
 
-                <a href="#" class="nav-item">
+                <!-- <a href="#" class="nav-item">
                     <span class="nav-icon">◯</span>
                     <span>Support Cases</span>
                 </a>
@@ -56,14 +56,39 @@
                 <a href="#" class="nav-item">
                     <span class="nav-icon">▥</span>
                     <span>Analytics</span>
+                </a> -->
+
+                <a href="#" class="nav-item page-link" data-page="notes">
+                    <span class="nav-icon">📝</span>
+                    <span>Project Notes</span>
                 </a>
 
-                <a href="#" class="nav-item">
+                <a href="#" class="nav-item page-link" data-page="techstack">
+                    <span class="nav-icon">🧩</span>
+                    <span>Tech Stack</span>
+                </a>
+
+                <a href="#" class="nav-item page-link" data-page="comingSoon">
+                    <span class="nav-icon">🚀</span>
+                    <span>Coming Soon</span>
+                </a>
+
+                <!-- <a href="#" class="nav-item">
                     <span class="nav-icon">⚙</span>
                     <span>Settings</span>
-                </a>
+                </a> -->
 
             </nav>
+
+            <!-- <div class="theme-switcher">
+                <span class="theme-icon" id="themeIcon">🌙</span>
+                <span id="themeText">Dark Mode</span>
+
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div> -->
 
             <!-- System status -->
 
@@ -869,6 +894,293 @@
             </section>
 
         </main>
+
+        <!-- ================= PROJECT NOTES ================= -->
+
+<section class="content-page" id="notesPage">
+
+    <div class="page-title">
+        <span class="page-badge">PROJECT NOTES</span>
+
+        <h1>AI Support Assistant</h1>
+
+        <p>
+            Project introduction, architecture and learning notes.
+        </p>
+    </div>
+
+
+    <div class="notes-grid">
+
+        <div class="info-card">
+            <div class="card-icon">🤖</div>
+
+            <h2>Project Introduction</h2>
+
+            <p>
+                AI Support Assistant is an enterprise-style support
+                application designed to analyze customer support cases,
+                identify possible issues and provide troubleshooting
+                suggestions.
+            </p>
+
+            <p>
+                The project is being developed as a learning and
+                demonstration application while exploring Python,
+                backend development and AI integration.
+            </p>
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="card-icon">🔄</div>
+
+            <h2>How It Works</h2>
+
+            <div class="architecture-flow">
+
+                <span>HTML / CSS</span>
+
+                <span>→</span>
+
+                <span>JavaScript</span>
+
+                <span>→</span>
+
+                <span>Flask</span>
+
+                <span>→</span>
+
+                <span>Python</span>
+
+                <span>→</span>
+
+                <span>AI</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="card-icon">🎯</div>
+
+            <h2>Current Goal</h2>
+
+            <p>
+                Build a working support-case analyzer that demonstrates
+                frontend, backend and AI concepts in a single application.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= TECH STACK ================= -->
+
+<section class="content-page" id="techstackPage">
+
+    <div class="page-title">
+
+        <span class="page-badge">TECHNOLOGY</span>
+
+        <h1>Technology Stack</h1>
+
+        <p>
+            Technologies currently used in the AI Support Assistant.
+        </p>
+
+    </div>
+
+
+    <div class="stack-grid">
+
+        <div class="stack-card">
+            <div class="stack-icon html-icon">HTML</div>
+
+            <h2>HTML</h2>
+
+            <p>
+                Used to create the structure of the web application.
+            </p>
+
+            <span class="status-badge used">
+                ✓ Used
+            </span>
+        </div>
+
+
+        <div class="stack-card">
+            <div class="stack-icon css-icon">CSS</div>
+
+            <h2>CSS</h2>
+
+            <p>
+                Used to create the enterprise-style user interface,
+                layout and visual design.
+            </p>
+
+            <span class="status-badge used">
+                ✓ Used
+            </span>
+        </div>
+
+
+        <div class="stack-card">
+            <div class="stack-icon js-icon">JS</div>
+
+            <h2>JavaScript</h2>
+
+            <p>
+                Used for frontend interaction, event handling and
+                communication with the backend.
+            </p>
+
+            <span class="status-badge used">
+                ✓ Used
+            </span>
+        </div>
+
+
+        <div class="stack-card">
+            <div class="stack-icon python-icon">Py</div>
+
+            <h2>Python</h2>
+
+            <p>
+                Used as the backend programming language and for future
+                AI integration.
+            </p>
+
+            <span class="status-badge used">
+                ✓ Used
+            </span>
+        </div>
+
+
+        <div class="stack-card">
+            <div class="stack-icon flask-icon">Fl</div>
+
+            <h2>Flask</h2>
+
+            <p>
+                Python web framework used to create the backend API.
+            </p>
+
+            <span class="status-badge used">
+                ✓ Used
+            </span>
+        </div>
+
+
+        <div class="stack-card upcoming-card">
+
+            <div class="stack-icon ai-icon">✦</div>
+
+            <h2>AI / LLM</h2>
+
+            <p>
+                Planned for the next stage of the project to perform
+                actual intelligent case analysis.
+            </p>
+
+            <span class="status-badge upcoming">
+                Coming Soon
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= COMING SOON ================= -->
+
+<section class="content-page" id="comingSoonPage">
+
+    <div class="page-title">
+
+        <span class="page-badge">ROADMAP</span>
+
+        <h1>Coming Soon</h1>
+
+        <p>
+            The next evolution of the AI Support Assistant.
+        </p>
+
+    </div>
+
+
+    <div class="coming-soon-card">
+
+        <div class="coming-icon">
+            ✦
+        </div>
+
+        <h2>Actual AI Integration</h2>
+
+        <p>
+            The current application is connected to a Python Flask
+            backend. The next stage is to integrate an actual AI model
+            so that support cases can be analyzed intelligently.
+        </p>
+
+
+        <div class="roadmap">
+
+            <div class="roadmap-item completed">
+                <span>✓</span>
+                <div>
+                    <strong>Frontend UI</strong>
+                    <small>HTML + CSS + JavaScript</small>
+                </div>
+            </div>
+
+
+            <div class="roadmap-item completed">
+                <span>✓</span>
+                <div>
+                    <strong>Backend API</strong>
+                    <small>Python + Flask</small>
+                </div>
+            </div>
+
+
+            <div class="roadmap-item completed">
+                <span>✓</span>
+                <div>
+                    <strong>Frontend ↔ Backend</strong>
+                    <small>API communication</small>
+                </div>
+            </div>
+
+
+            <div class="roadmap-item upcoming">
+                <span>✦</span>
+                <div>
+                    <strong>AI Integration</strong>
+                    <small>LLM-powered case analysis</small>
+                </div>
+            </div>
+
+
+            <div class="roadmap-item upcoming">
+                <span>✦</span>
+                <div>
+                    <strong>Knowledge Base / RAG</strong>
+                    <small>Context-aware support suggestions</small>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
     </div>
 

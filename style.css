@@ -1316,3 +1316,402 @@ textarea::placeholder {
     }
 
 }
+
+/* =========================================
+   PROJECT NOTES / EXTRA PAGES
+   ========================================= */
+
+.content-page {
+    display: none;
+    animation: pageFade 0.25s ease;
+}
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.page-title {
+    margin-bottom: 28px;
+}
+
+.page-title h1 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.page-title p {
+    opacity: 0.7;
+}
+
+
+.page-badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #7ea7ff;
+    background: rgba(70, 110, 255, 0.12);
+}
+
+
+/* =========================================
+   NOTES
+   ========================================= */
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.info-card {
+    padding: 24px;
+    border-radius: 16px;
+    background: rgba(15, 34, 72, 0.72);
+    border: 1px solid rgba(100, 140, 220, 0.18);
+}
+
+.info-card h2 {
+    margin: 12px 0;
+}
+
+.info-card p {
+    line-height: 1.7;
+    opacity: 0.75;
+}
+
+.card-icon {
+    font-size: 28px;
+}
+
+
+.architecture-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.architecture-flow span {
+    padding: 10px 13px;
+    border-radius: 10px;
+    background: rgba(40, 90, 200, 0.18);
+    border: 1px solid rgba(80, 130, 255, 0.2);
+}
+
+
+/* =========================================
+   TECH STACK
+   ========================================= */
+
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.stack-card {
+    padding: 22px;
+    border-radius: 16px;
+    background: rgba(15, 34, 72, 0.72);
+    border: 1px solid rgba(100, 140, 220, 0.18);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.stack-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(80, 140, 255, 0.5);
+}
+
+.stack-card h2 {
+    margin: 16px 0 8px;
+}
+
+.stack-card p {
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+
+.stack-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    background: rgba(40, 100, 220, 0.18);
+}
+
+
+.status-badge {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.status-badge.used {
+    background: rgba(40, 200, 130, 0.12);
+    color: #55d99b;
+}
+
+.status-badge.upcoming {
+    background: rgba(150, 90, 255, 0.14);
+    color: #ad82ff;
+}
+
+
+/* =========================================
+   COMING SOON
+   ========================================= */
+
+.coming-soon-card {
+    max-width: 850px;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    background: linear-gradient(
+        145deg,
+        rgba(17, 43, 90, 0.95),
+        rgba(10, 27, 60, 0.95)
+    );
+    border: 1px solid rgba(90, 140, 255, 0.2);
+}
+
+.coming-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 32px;
+    background: rgba(80, 100, 255, 0.16);
+}
+
+.coming-soon-card p {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+    opacity: 0.7;
+}
+
+
+.roadmap {
+    margin-top: 35px;
+    text-align: left;
+}
+
+.roadmap-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background: rgba(5, 18, 45, 0.5);
+}
+
+.roadmap-item > span {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.roadmap-item.completed > span {
+    background: rgba(50, 210, 140, 0.15);
+    color: #55d99b;
+}
+
+.roadmap-item.upcoming > span {
+    background: rgba(120, 90, 255, 0.15);
+    color: #ad82ff;
+}
+
+.roadmap-item small {
+    display: block;
+    margin-top: 4px;
+    opacity: 0.6;
+}
+
+
+/* =========================================
+   THEME SWITCH
+   ========================================= */
+
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 14px 12px;
+    margin-top: 12px;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.theme-icon {
+    font-size: 15px;
+}
+
+
+.switch {
+    position: relative;
+    width: 40px;
+    height: 22px;
+    margin-left: auto;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    border-radius: 30px;
+    background: #24385e;
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 3px;
+    top: 3px;
+    border-radius: 50%;
+    background: white;
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+    background: #3f6df6;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(18px);
+}
+
+
+/* =========================================
+   LIGHT MODE
+   ========================================= */
+
+body.light-mode {
+    background: #f4f7fc;
+    color: #17213a;
+}
+
+body.light-mode .sidebar {
+    background: #ffffff;
+    border-right-color: #dce4f2;
+}
+
+body.light-mode .main-content {
+    background: #f4f7fc;
+}
+
+body.light-mode .panel,
+body.light-mode .metric-card,
+body.light-mode .info-card,
+body.light-mode .stack-card {
+    background: #ffffff;
+    border-color: #dce4f2;
+}
+
+body.light-mode .coming-soon-card {
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #edf3ff
+    );
+    border-color: #dce4f2;
+}
+
+body.light-mode .roadmap-item {
+    background: #f4f7fc;
+}
+
+body.light-mode .page-title p,
+body.light-mode .info-card p,
+body.light-mode .stack-card p,
+body.light-mode .coming-soon-card p {
+    color: #53627c;
+}
+
+body.light-mode .architecture-flow span {
+    background: #edf3ff;
+    border-color: #d5e1fb;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .stack-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .stack-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .coming-soon-card {
+        padding: 25px;
+    }
+}
+
+/* =========================================
+   CENTER EXTRA PAGES
+   ========================================= */
+
+.content-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px 40px;
+    box-sizing: border-box;
+}
+
+.content-page .page-title {
+    text-align: center;
+}
+
+.content-page .coming-soon-card {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto 0;
+}

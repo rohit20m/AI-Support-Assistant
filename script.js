@@ -45,6 +45,20 @@ analyzeButton.addEventListener("click", async function () {
         })
     });
 
+    const result = await response.json();
+
+    category.textContent = "Backend Connected";
+    priority.textContent = "Received";
+
+    cause.textContent = result.message;
+
+    suggestions.innerHTML = `
+        <li>
+            <span>✓</span>
+            Python received: ${result.case}
+        </li>
+    `;
+
     // // ==============================
     // // RTM PROJECT CASE
     // // ==============================
@@ -208,5 +222,135 @@ analyzeButton.addEventListener("click", async function () {
     //     `;
 
     // }
+
+});
+
+// ==============================
+// PAGE NAVIGATION
+// ==============================
+
+const pageLinks = document.querySelectorAll(".page-link");
+
+const contentPages = document.querySelectorAll(".content-page");
+
+const overviewContent = document.querySelectorAll(
+    ".main-content > .top-header, .main-content > .metrics-grid, .main-content > .dashboard-grid"
+);
+
+
+pageLinks.forEach(function (link) {
+
+    link.addEventListener("click", function (event) {
+
+        event.preventDefault();
+
+        const pageName = link.dataset.page;
+
+
+        // Hide overview
+
+        overviewContent.forEach(function (section) {
+            section.style.display = "none";
+        });
+
+
+        // Hide all additional pages
+
+        contentPages.forEach(function (page) {
+            page.style.display = "none";
+        });
+
+
+        // Show selected page
+
+        const selectedPage =
+            document.getElementById(pageName + "Page");
+
+        selectedPage.style.display = "block";
+
+
+        // Remove active state
+
+        document.querySelectorAll(".nav-item").forEach(function (item) {
+            item.classList.remove("active");
+        });
+
+
+        // Add active state
+
+        link.classList.add("active");
+
+    });
+
+});
+
+// ==============================
+// OVERVIEW NAVIGATION
+// ==============================
+
+const overviewLink = document.querySelector(
+    '.nav-item:first-child'
+);
+
+
+overviewLink.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+
+    // Show overview
+
+    overviewContent.forEach(function (section) {
+        section.style.display = "";
+    });
+
+
+    // Hide additional pages
+
+    contentPages.forEach(function (page) {
+        page.style.display = "none";
+    });
+
+
+    // Active state
+
+    document.querySelectorAll(".nav-item").forEach(function (item) {
+        item.classList.remove("active");
+    });
+
+    overviewLink.classList.add("active");
+
+});
+
+// ==============================
+// DARK / LIGHT MODE
+// ==============================
+
+const themeToggle = document.getElementById("themeToggle");
+
+const themeText = document.getElementById("themeText");
+
+const themeIcon = document.getElementById("themeIcon");
+
+
+themeToggle.addEventListener("change", function () {
+
+    document.body.classList.toggle(
+        "light-mode",
+        themeToggle.checked
+    );
+
+
+    if (themeToggle.checked) {
+
+        themeText.textContent = "Light Mode";
+        themeIcon.textContent = "☀️";
+
+    } else {
+
+        themeText.textContent = "Dark Mode";
+        themeIcon.textContent = "🌙";
+
+    }
 
 });
