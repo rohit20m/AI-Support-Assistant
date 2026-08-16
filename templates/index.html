@@ -6,7 +6,7 @@
 
     <title>AI Support Assistant</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href={{url_for( 'static', filename='style.css')}}>"
 </head>
 
 <body>
@@ -658,7 +658,7 @@
         </div>
 
 
-        <div class="info-card">
+        <!--<div class="info-card">
 
             <div class="card-icon">🔄</div>
 
@@ -686,7 +686,7 @@
 
             </div>
 
-        </div>
+        </div>-->
 
 
         <div class="info-card">
@@ -911,7 +911,7 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
 
 </body>
 </html>

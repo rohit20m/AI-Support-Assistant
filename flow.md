@@ -1,23 +1,25 @@
-User enters case
-      ↓
-HTML textarea
-      ↓
-JavaScript click event
-      ↓
-caseText is created
-      ↓
-JavaScript sends POST request
-      ↓
-Flask / Python receives it
-      ↓
-request.json
-      ↓
-case_text = data["case"]
-      ↓
-Python processes it
-      ↓
-Python returns JSON
-      ↓
-JavaScript receives JSON
-      ↓
-UI is updated
+**Flow of the Project**
+
+Browser requests /
+       ↓
+Flask
+       ↓
+render_template("index.html")
+       ↓
+Browser displays page
+       ↓
+User clicks Analyze Case
+       ↓
+script.js
+       ↓
+POST /analyze
+       ↓
+Flask
+       ↓
+Python analysis
+       ↓
+JSON
+       ↓
+script.js
+       ↓
+Dashboard
