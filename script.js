@@ -25,7 +25,7 @@ caseInput.addEventListener("input", function () {
 analyzeButton.addEventListener("click", async function () {
 
     const caseText = caseInput.value.trim().toLowerCase();
-
+    console.log(caseText);
 
     // Check whether user entered something
 
@@ -47,17 +47,18 @@ analyzeButton.addEventListener("click", async function () {
 
     const result = await response.json();
 
-    category.textContent = "Backend Connected";
-    priority.textContent = "Received";
+    category.textContent = result.category;
+    priority.textContent = result.priority;
 
-    cause.textContent = result.message;
+    cause.textContent = result.cause;
 
-    suggestions.innerHTML = `
-        <li>
-            <span>✓</span>
-            Python received: ${result.case}
-        </li>
-    `;
+    suggestions.innerHTML = "";
+
+    result.suggestions.forEach(function (suggestion) {
+        const li = document.createElement("li");
+        li.innerHTML = `<span>✓</span> ${suggestion}`;
+        suggestions.appendChild(li);
+    });
 
     // // ==============================
     // // RTM PROJECT CASE

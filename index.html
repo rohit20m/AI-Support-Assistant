@@ -143,129 +143,73 @@
             <!-- Header -->
 
             <header class="top-header">
-
                 <div>
-
                     <div class="title-row">
-
                         <h1>AI Support Assistant</h1>
-
                         <span class="live-badge">
                             <span></span>
                             Live
                         </span>
-
                     </div>
-
-                    <p>
-                        Analyze support cases, find solutions and assist customers with AI
-                    </p>
-
+                    <p> Analyze support cases, find solutions and assist customers with AI</p>
                 </div>
 
                 <div class="header-actions">
-
                     <button class="date-button">
                         Last 7 days
                         <span>⌄</span>
                     </button>
-
                     <button class="new-case-button">
                         + New Case
                     </button>
-
                 </div>
-
             </header>
-
 
             <!-- ================= METRICS ================= -->
 
             <section class="metrics-grid">
-
                 <div class="metric-card">
-
                     <div class="metric-icon blue">
                         ◯
                     </div>
 
                     <div class="metric-content">
-
                         <span>Support Cases</span>
-
                         <strong>1,248</strong>
-
-                        <small class="positive">
-                            ↗ 12.4%
-                        </small>
-
+                        <small class="positive">↗ 12.4%</small>
                     </div>
-
                 </div>
 
-
                 <div class="metric-card">
-
-                    <div class="metric-icon purple">
-                        ✦
-                    </div>
+                    <div class="metric-icon purple">✦</div>
 
                     <div class="metric-content">
-
                         <span>AI Resolution Rate</span>
-
                         <strong>87.6%</strong>
-
-                        <small class="positive">
-                            ↗ 6.8%
-                        </small>
-
+                        <small class="positive">↗ 6.8%</small>
                     </div>
-
                 </div>
 
-
                 <div class="metric-card">
-
                     <div class="metric-icon cyan">
                         ◷
                     </div>
 
                     <div class="metric-content">
-
                         <span>Avg. Handle Time</span>
-
                         <strong>4m 32s</strong>
-
-                        <small class="positive">
-                            ↘ 8.7%
-                        </small>
-
+                        <small class="positive">↘ 8.7%</small>
                     </div>
-
                 </div>
-
 
                 <div class="metric-card">
-
-                    <div class="metric-icon pink">
-                        ♙
-                    </div>
-
+                    <div class="metric-icon pink">♙</div>
                     <div class="metric-content">
-
                         <span>AI Suggestions</span>
-
                         <strong>3,842</strong>
-
-                        <small class="positive">
-                            ↗ 18.2%
-                        </small>
-
+                        <small class="positive">↗ 18.2%</small>
                     </div>
-
                 </div>
-
             </section>
 
 
@@ -278,244 +222,130 @@
 
                 <div class="left-column">
 
-
                     <!-- CASE ANALYZER -->
 
                     <div class="panel case-panel">
-
                         <div class="panel-header">
-
                             <div>
-
                                 <h2>Support Case Analyzer</h2>
-
-                                <p>
-                                    Describe a customer issue and let AI analyze it
-                                </p>
-
+                                <p>Describe a customer issue and let AI analyze it</p>
                             </div>
 
-                            <span class="ai-badge">
-                                AI Powered
-                            </span>
-
+                            <span class="ai-badge">AI Powered</span>
                         </div>
 
-
                         <div class="case-input-area">
+                            <label for="caseInput">Case Description</label>
 
-                            <label for="caseInput">
-                                Case Description
-                            </label>
-
-                            <textarea
-                                id="caseInput"
-                                placeholder="Example: The user is unable to close the store after completing the daily operations..."
-                            ></textarea>
-
+                            <textarea id="caseInput" placeholder="Example: The user is unable to close the store after completing the daily operations..."></textarea>
 
                             <div class="input-footer">
-
                                 <span>
                                     <span id="characterCount">0</span> characters
                                 </span>
 
-                                <button
-                                    class="analyze-button"
-                                    id="analyzeButton"
-                                >
+                                <button class="analyze-button" id="analyzeButton">
                                     <span>✦</span>
                                     Analyze Case
                                 </button>
-
                             </div>
-
                         </div>
-
 
                         <!-- AI RESULT -->
 
-                        <div
-                            class="analysis-result"
-                            id="analysisResult"
-                        >
-
+                        <div class="analysis-result" id="analysisResult">
                             <div class="result-header">
-
                                 <div class="result-title">
-
-                                    <div class="ai-avatar">
-                                        AI
-                                    </div>
-
+                                    <div class="ai-avatar">AI</div>
                                     <div>
-
                                         <strong>AI Analysis</strong>
-
-                                        <small>
-                                            Ready to analyze your case
-                                        </small>
-
+                                        <small>Ready to analyze your case</small>
                                     </div>
-
                                 </div>
 
-                                <span class="confidence">
-                                    Confidence: 92%
-                                </span>
-
+                                <span class="confidence">Confidence: 92%</span>
                             </div>
 
-
                             <div class="result-grid">
-
                                 <div class="result-item">
-
                                     <span>Issue Category</span>
-
-                                    <strong id="category">
-                                        —
-                                    </strong>
-
+                                    <strong id="category">—</strong>
                                 </div>
-
 
                                 <div class="result-item">
-
                                     <span>Priority</span>
-
-                                    <strong id="priority">
-                                        —
-                                    </strong>
-
+                                    <strong id="priority">—</strong>
                                 </div>
-
 
                                 <div class="result-item full">
-
                                     <span>Possible Cause</span>
-
                                     <p id="cause">
                                         Enter a support case above and click
                                         "Analyze Case" to get an AI-generated analysis.
                                     </p>
-
                                 </div>
-
                             </div>
 
-
                             <div class="suggested-actions">
-
                                 <h3>Suggested Troubleshooting</h3>
-
                                 <ul id="suggestions">
-
                                     <li>
                                         <span>✓</span>
                                         AI suggestions will appear here
                                     </li>
-
                                 </ul>
-
                             </div>
-
                         </div>
-
                     </div>
-
 
                     <!-- LIVE CONVERSATIONS -->
 
                     <div class="panel">
-
                         <div class="panel-header">
-
                             <div>
-
                                 <h2>Live Conversations</h2>
-
                                 <p>Recent customer interactions</p>
-
                             </div>
 
-                            <span class="active-count">
-                                ● 13 active
-                            </span>
-
+                            <span class="active-count">● 13 active</span>
                         </div>
 
-
                         <div class="conversation">
-
-                            <div class="conversation-avatar">
-                                EM
-                            </div>
-
+                            <div class="conversation-avatar">EM</div>
                             <div class="conversation-content">
-
                                 <div class="conversation-name">
                                     <strong>Customer #EM-98421</strong>
                                     <span>2 min ago</span>
                                 </div>
 
-                                <p>
-                                    User is unable to complete the store closing process.
-                                </p>
+                                <p>User is unable to complete the store closing process.</p>
 
                                 <div class="ai-message">
-
-                                    <div class="small-ai">
-                                        AI
-                                    </div>
-
-                                    <span>
-                                        AI suggested checking store status and user permissions.
-                                    </span>
-
+                                    <div class="small-ai">AI</div>
+                                    <span>AI suggested checking store status and user permissions.</span>
                                 </div>
-
                             </div>
-
                         </div>
 
-
                         <div class="conversation">
-
-                            <div class="conversation-avatar">
-                                AK
-                            </div>
-
+                            <div class="conversation-avatar">AK</div>
                             <div class="conversation-content">
-
                                 <div class="conversation-name">
                                     <strong>Customer #AK-78213</strong>
                                     <span>5 min ago</span>
                                 </div>
 
-                                <p>
-                                    Dashboard is showing incorrect scheduling information.
-                                </p>
+                                <p>Dashboard is showing incorrect scheduling information.</p>
 
                                 <div class="ai-message">
-
-                                    <div class="small-ai">
-                                        AI
+                                    <div class="small-ai">AI
                                     </div>
 
-                                    <span>
-                                        Possible configuration mismatch detected.
-                                    </span>
-
+                                    <span>Possible configuration mismatch detected.</span>
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
-
-
                 </div>
 
 
@@ -523,19 +353,13 @@
 
                 <div class="right-column">
 
-
                     <!-- AI AGENT -->
 
                     <div class="panel agent-panel">
-
                         <div class="panel-header">
-
                             <div>
-
                                 <h2>AI Support Agent</h2>
-
                                 <p>AI assistant status</p>
-
                             </div>
 
                             <span class="active-badge">
@@ -544,196 +368,98 @@
 
                         </div>
 
-
                         <div class="agent-body">
-
                             <div class="robot-container">
-
-                                <div class="robot">
-                                    AI
-                                </div>
-
+                                <div class="robot">AI</div>
                             </div>
 
-
                             <div class="agent-details">
-
                                 <div class="detail">
-
                                     <span>Model</span>
-
                                     <strong>AI Support Model</strong>
-
                                 </div>
 
                                 <div class="detail">
-
                                     <span>Confidence</span>
-
                                     <strong>92%</strong>
 
                                     <div class="confidence-bar">
-
                                         <div></div>
-
                                     </div>
-
                                 </div>
 
                                 <div class="detail">
-
                                     <span>Knowledge Sources</span>
-
                                     <strong>12 documents</strong>
-
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
 
 
                     <!-- HOW AI HELPS -->
 
                     <div class="panel">
-
                         <div class="panel-header">
-
                             <div>
-
                                 <h2>How AI Helps</h2>
-
                                 <p>Support workflow</p>
-
                             </div>
-
                         </div>
-
 
                         <div class="ai-flow">
-
                             <div class="flow-item">
-
-                                <div class="flow-icon">
-                                    💬
-                                </div>
-
+                                <div class="flow-icon">💬</div>
                                 <strong>1. Request</strong>
-
-                                <small>
-                                    Customer describes issue
-                                </small>
-
+                                <small>Customer describes issue</small>
                             </div>
 
-
-                            <div class="flow-arrow">
-                                →
-                            </div>
-
-
+                            <div class="flow-arrow">→</div>
                             <div class="flow-item">
-
-                                <div class="flow-icon">
-                                    ✦
-                                </div>
-
+                                <div class="flow-icon">✦</div>
                                 <strong>2. Analyze</strong>
-
-                                <small>
-                                    AI analyzes the issue
-                                </small>
-
+                                <small>AI analyzes the issue</small>
                             </div>
 
-
-                            <div class="flow-arrow">
-                                →
-                            </div>
-
+                            <div class="flow-arrow">→</div>
 
                             <div class="flow-item">
-
-                                <div class="flow-icon">
-                                    ⚡
-                                </div>
-
+                                <div class="flow-icon">⚡</div>
                                 <strong>3. Suggest</strong>
-
-                                <small>
-                                    Provides solution
-                                </small>
-
+                                <small>Provides solution</small>
                             </div>
 
-
-                            <div class="flow-arrow">
-                                →
-                            </div>
-
+                            <div class="flow-arrow">→</div>
 
                             <div class="flow-item">
-
-                                <div class="flow-icon success">
-                                    ✓
-                                </div>
-
+                                <div class="flow-icon success">✓</div>
                                 <strong>4. Resolve</strong>
-
-                                <small>
-                                    Resolve or escalate
-                                </small>
-
+                                <small>Resolve or escalate</small>
                             </div>
-
                         </div>
-
                     </div>
-
 
                     <!-- KNOWLEDGE BASE -->
 
                     <div class="panel">
-
                         <div class="panel-header">
-
                             <div>
-
                                 <h2>Knowledge Base</h2>
-
                                 <p>Available support documentation</p>
-
                             </div>
 
-                            <a href="#">
-                                View all
-                            </a>
-
+                            <a href="#">View all</a>
                         </div>
-
 
                         <div class="search-box">
-
                             <span>⌕</span>
-
-                            <input
-                                type="text"
-                                placeholder="Search documentation..."
-                            >
-
+                            <input type="text" placeholder="Search documentation...">
                         </div>
 
-
                         <div class="knowledge-item">
-
-                            <div class="document-icon">
-                                ▤
-                            </div>
+                            <div class="document-icon">▤</div>
 
                             <div>
-
                                 <strong>
                                     Store Management Guide
                                 </strong>
