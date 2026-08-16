@@ -35,7 +35,7 @@ analyzeButton.addEventListener("click", async function () {
     }
 
 
-    const response = await fetch("http://127.0.0.1:5000/analyze", {
+    const response = await fetch("/analyze", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -47,18 +47,17 @@ analyzeButton.addEventListener("click", async function () {
 
     const result = await response.json();
 
-    category.textContent = result.category;
-    priority.textContent = result.priority;
-
-    cause.textContent = result.cause;
-
+    category.textContent = result.analysis.category;
+    priority.textContent = result.analysis.priority;
+    cause.textContent = result.analysis.cause;
     suggestions.innerHTML = "";
 
-    result.suggestions.forEach(function (suggestion) {
-        const li = document.createElement("li");
-        li.innerHTML = `<span>✓</span> ${suggestion}`;
-        suggestions.appendChild(li);
-    });
+    result.analysis.suggestions.forEach(function (suggestion) {
+    const li = document.createElement("li");
+    li.innerHTML = `<span>✓</span> ${suggestion}`;
+    suggestions.appendChild(li);
+
+});
 
     // // ==============================
     // // RTM PROJECT CASE
